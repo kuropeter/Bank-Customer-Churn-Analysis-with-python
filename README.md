@@ -33,7 +33,7 @@ To reproduce the results of this project, please follow these steps:
 
 5. Run `01_Exploratory_Data_Analysis.ipynb` to perform EDA on the dataset. This notebook will generate visualizations and insights into the data.
 
-6. Run `02_Modeling.ipynb` to build predictive models using logistic regression, naive Bayes, decision tree, random forest, SVM, and XGBoost. This notebook will evaluate the models based on various metrics and identify the model with the highest accuracy.
+6. Run `02_Model_Building.ipynb` to build predictive models using logistic regression, naive Bayes, decision tree, random forest, SVM, and XGBoost. This notebook will evaluate the models based on various metrics and identify the model with the highest accuracy.
 
 7. Examine the output files in the `output` directory to review the results and visualizations generated during the analysis.
 
