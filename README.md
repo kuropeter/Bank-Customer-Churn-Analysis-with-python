@@ -47,9 +47,7 @@ Based on the churn analysis project, several decisions and recommendations can b
 
 3. **Geographical Analysis**: Investigate the `Geography` column to identify any regional variations in churn rates. Determine if there are specific regions with higher churn rates and examine the reasons behind it. Tailor marketing and customer service efforts to address regional variations and reduce churn.
 
-4. **Gender Analysis**: Explore the impact of `Gender` on churn. Identify if there
-
- are any gender-related patterns contributing to churn and design gender-specific retention strategies accordingly.
+4. **Gender Analysis**: Explore the impact of `Gender` on churn. Identify if there are any gender-related patterns contributing to churn and design gender-specific retention strategies accordingly.
 
 5. **Tenure and Age**: Analyze the relationship between `Tenure`, `Age`, and churn rates. Determine if there is an optimal tenure or age range that correlates with lower churn. Develop strategies to retain customers within that range or offer tailored benefits to long-standing customers.
 
