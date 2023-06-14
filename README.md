@@ -1,62 +1,100 @@
-# Churn Analysis Project - Readme
+# Bank Customer Churn Analysis with Python
+
+This repository contains two Jupyter notebooks that perform exploratory data analysis (EDA) and model building for a bank customer churn analysis. The 
+notebooks are available for cloning and corrections in this repository as `01_Exploratory_Data_Analysis.ipynb` and `Model_building.ipynb`
 
 ## Problem Statement
 
-The goal of this project is to analyze customer churn for a bank using Python. Customer churn refers to the phenomenon of customers leaving a company's services or products. By understanding the factors that contribute to churn, the bank can take proactive measures to retain customers and reduce the overall churn rate. The dataset contains several columns including `CreditScore`, `Geography`, `Gender`, `Age`, `Tenure`, `Balance`, `NumOfProducts`, `HasCreditCard`, `IsActiveMember`, `EstimatedSalary`, and `Exited`.
+Customer churn is a major problem for banks. It can lead to lost revenue, increased costs, and a decline in customer satisfaction. This project aims to identify the key factors that are associated with customer churn and to develop strategies to reduce customer churn and improve customer retention.
 
-## Project Structure
+The objectives of this project are to:
 
-The project consists of the following files and directories:
+* Identify the key factors that are associated with customer churn.
+* Develop strategies to reduce customer churn and improve customer retention.
+* Develop and evaluate high accuracy model for prodicting churn.
 
-1. **data**: This directory contains the dataset used for analysis. It should include the necessary input files in a suitable format.
+The expected results of this project are:
 
-2. **notebooks**: This directory contains the Jupyter Notebooks used for data analysis and model building. The notebooks are organized as follows:
-   - `01_Exploratory_Data_Analysis.ipynb`: This notebook focuses on data exploration and visualization. It provides insights into the dataset, identifies patterns, and helps in understanding the data.
+* A list of the key factors that are associated with customer churn.
+* Strategies to reduce customer churn and improve customer retention.
+* A model that can reliably prodict customer churn 
 
-   - `02_Modeling.ipynb`: This notebook focuses on building predictive models using various algorithms. It includes implementing logistic regression, naive Bayes, decision tree, random forest, SVM, and XGBoost. The model evaluation metrics are calculated to compare the performance of each model.
 
-3. **output**: This directory contains the output files generated during the analysis. It includes any visualizations, summaries, or results obtained from the EDA and modeling process.
+## Requirements
 
-4. **README.md**: This file provides an overview of the project, its objectives, and instructions on how to use the code.
+* Python 3.6 or higher
+* Jupyter Notebook
+* NumPy
+* Pandas
+* Matplotlib.pyplot
+* Seaborn
+* Scikit-learn
 
-## Project Execution
 
-To reproduce the results of this project, please follow these steps:
+## Dataset
 
-1. Clone the project repository to your local machine.
+The dataset used for this analysis is a CSV file that can be accessed in this repository `Churn_Modelling.csv` and it contains the following columns:
 
-2. Set up the required Python environment by installing the necessary libraries and dependencies. It is recommended to use a virtual environment.
+* RowNumber: Used to sort the data (1-2000)
+* Customerid: The customer's ID number with bank
+* Surname: The customer's last name
+* CreditScore: The customer's credit score
+* Geography: The customer's geographic location
+* Gender: The customer's gender
+* Age: The customer's age
+* Tenure: The customer's length of time as a customer
+* Balance: The customer's account balance
+* NumOfProducts: The number of products that the customer has with the bank
+* HasCreditCard: Whether or not the customer has a credit card with the bank
+* IsActiveMember: Whether or not the customer is an active member of the bank
+* EstimatedSalary: The customer's estimated salary
+* Exited: Whether or not the customer has churned
 
-3. Ensure that the dataset is present in the `data` directory and is correctly formatted.
+## EDA Notebook
 
-4. Open the Jupyter Notebooks in the `notebooks` directory using Jupyter Notebook or any other compatible environment.
+The EDA notebook explores the dataset and identifies key features that are associated with customer churn. The notebook also includes visualizations that help to understand the distribution of the data and the relationships between the features.
 
-5. Run `01_Exploratory_Data_Analysis.ipynb` to perform EDA on the dataset. This notebook will generate visualizations and insights into the data.
+## Model Building Notebook
 
-6. Run `02_Model_Building.ipynb` to build predictive models using logistic regression, naive Bayes, decision tree, random forest, SVM, and XGBoost. This notebook will evaluate the models based on various metrics and identify the model with the highest accuracy.
+The model building notebook builds six different machine learning models to predict customer churn. The models are evaluated using accuracy, precision, recall, auc_roc_curve and kappa score. The random forest model achieves the best results, with an accuracy of 87% and a kappa score of 0.52.
 
-7. Examine the output files in the `output` directory to review the results and visualizations generated during the analysis.
+## Usage
 
-## Decisions and Recommendations
+To run the notebooks, clone the repository and then open the Jupyter Notebook application. The notebooks can be run by clicking on the `Run` button in the top right corner of the notebook.
 
-Based on the churn analysis project, several decisions and recommendations can be made for the bank:
+## Results
 
-1. **Customer Retention Strategies**: Identify the key factors contributing to customer churn, such as low credit scores, high balances, or inactive membership. Develop targeted strategies to address these issues and enhance customer retention efforts.
+The results of the analysis show that the following features are most associated with customer churn:
 
-2. **Product Optimization**: Analyze the `NumOfProducts` column to understand how the number of products a customer uses affects churn. Determine if customers with a higher number of products are more likely to churn or if there is an optimal range. Optimize product offerings and incentives to retain customers within that range.
+* Geography
+* Gender
+* Age
+* Credit score
+* NumOfProducts
+* Tenure
 
-3. **Geographical Analysis**: Investigate the `Geography` column to identify any regional variations in churn rates. Determine if there are specific regions with higher churn rates and examine the reasons behind it. Tailor marketing and customer service efforts to address regional variations and reduce churn.
+The random forest model was able to predict customer churn with an accuracy of 87%. This means that the model was able to correctly identify 87% of customers who would churn. The kappa score of 0.52 indicates that the model is doing significantly better than random chance.
 
-4. **Gender Analysis**: Explore the impact of `Gender` on churn. Identify if there are any gender-related patterns contributing to churn and design gender-specific retention strategies accordingly.
+## Recommendations
 
-5. **Tenure and Age**: Analyze the relationship between `Tenure`, `Age`, and churn rates. Determine if there is an optimal tenure or age range that correlates with lower churn. Develop strategies to retain customers within that range or offer tailored benefits to long-standing customers.
+The results of the analysis suggest that the bank can take the following steps to reduce customer churn:
 
-6. **Credit Card Usage**: Investigate the impact of `HasCreditCard` on churn rates. Identify if customers with or without credit cards exhibit different churn behaviors. Utilize this insight to optimize credit card offerings or incentivize card usage to reduce churn.
+* Offer financial education and counseling to customers to help them improve their credit scores.
+* Develop targeted marketing campaigns to reach customers who are most likely to churn (Expecially customers in Germany, Females and Customers with fewer products).
+* Improve the customer experience by providing personalized service and making it easy for customers to do business with the bank.
 
-7. **Model Selection**: Select the model with the highest accuracy from the evaluated algorithms (logistic regression, naive Bayes, decision tree, random forest, SVM, and XGBoost). This chosen model can be deployed to predict churn for new customers and guide retention strategies effectively.
+## Future Work
 
-By leveraging the insights gained from this churn analysis project, the bank can take proactive measures to reduce customer churn, improve customer satisfaction, and enhance overall business performance.
+The following are some ideas for future work on this project:
 
-Please refer to the project's Jupyter Notebooks for a detailed walkthrough of the analysis and modeling process. Feel free to explore and modify the code as per your requirements.
+* Collect more data from customers to improve the accuracy of the models.
+* Use other machine learning algorithms to predict customer churn.
+* Develop a customer churn prevention program based on the results of the analysis.
 
-If you have any questions or feedback regarding this project, please don't hesitate to reach out.
+## Conclusion
+
+This project has the potential to make a significant contribution to the bank by helping to reduce customer churn and improve customer retention. The results of the project will be used to develop strategies to improve the customer experience and to make the bank more competitive.
+
+## Contact
+
+If you have any questions, please contact me at `kdoumu@gmail.com`
