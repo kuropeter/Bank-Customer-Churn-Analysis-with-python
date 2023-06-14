@@ -1,7 +1,7 @@
 # Bank Customer Churn Analysis with Python
 
 This repository contains two Jupyter notebooks that perform exploratory data analysis (EDA) and model building for a bank customer churn analysis. The 
-notebooks are available for cloning and corrections in this repository as `01_Exploratory_Data_Analysis.ipynb` and `Model_building.ipynb`
+notebooks are available for cloning and corrections in this repository as `EDA.ipynb` and `Model_building.ipynb`
 
 ## Problem Statement
 
